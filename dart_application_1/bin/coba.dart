@@ -1,9 +1,9 @@
 import 'dart:core';
-import 'dart:convert';
 import 'dart:io';
 class Coba
 {
   //tanda tanya untuk input user
+   
   String? nama;
   int? umur;
   int jarak=5;
@@ -23,14 +23,16 @@ class Coba
   void inputMatkul()
   {
     print("Masukkan matakuliah dan sks anda ");
-    for (var distance=1;distance<=jarak;distance++)
+    for (int distance=1;distance<=jarak;distance++)
     {
     print("Masukkan matakuliah anda  $distance :");
+    // ignore: unused_local_variable
     final matkul = stdin.readLineSync();
     print("Masukkan Sks anda  $distance :");
+    // ignore: unused_local_variable
     final sks= int.parse(stdin.readLineSync()!);
     }
-    for (var hasil=1;hasil<=jarak;hasil++)
+    for (int hasil=1;hasil<=jarak;hasil++)
     {
    print("Mata kuliah  : $matkul $hasil ") ;
    print("Sks anda : $sks $hasil");
