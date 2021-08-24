@@ -8,10 +8,11 @@ class Coba
   int? umur;
   int jarak=5;
   //List of integers
-  final sks = <int>[];
+List<int> sks = List.filled(9, 0, growable: false); // [0]
+  //List<int> sks = [0];
   //List of String
-  final matkul = <String>[];
- 
+List<String> matkul = List.filled(9, " ", growable: false); 
+
 
   void inputUser()
   {
@@ -23,20 +24,22 @@ class Coba
   void inputMatkul()
   {
     print("Masukkan matakuliah dan sks anda ");
-    for (int distance=1;distance<=jarak;distance++)
+    for (int distance=0;distance<jarak;distance++)
     {
     print("Masukkan matakuliah anda  $distance :");
-    // ignore: unused_local_variable
-    final matkul = stdin.readLineSync();
+    matkul[distance] = stdin.readLineSync()!;
     print("Masukkan Sks anda  $distance :");
-    // ignore: unused_local_variable
-    final sks= int.parse(stdin.readLineSync()!);
+     sks[distance]= int.parse(stdin.readLineSync()!);
     }
-    for (int hasil=1;hasil<=jarak;hasil++)
-    {
-   print("Mata kuliah  : $matkul $hasil ") ;
-   print("Sks anda : $sks $hasil");
-    }
+  for(int v = 0;v<jarak;v++)
+  {
+    stdout.write(" $v. Matkul anda : $matkul");
+     stdout.write(" Sks anda : $sks");
+   
+  }
+   
+     
+   
   }
   void ouputUser()
   {
