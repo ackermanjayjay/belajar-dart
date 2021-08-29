@@ -9,10 +9,14 @@ class Maps
   void cekMap()
   {
    
-    print("Ini map ges");
+    print("Input identitas");
      // jika ingin input user tambahkan key 
      // sama seperti jika ingin memasukkan input user 
      // dengan stdin.readLineSync();
+
+     //'Nama' = Key
+     //'umur' = Key
+     // stdin.readLineSync(); = value
 detail['Nama']= stdin.readLineSync();
 detail['umur'] = stdin.readLineSync();
   }
